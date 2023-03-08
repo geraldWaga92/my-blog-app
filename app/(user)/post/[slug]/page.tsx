@@ -3,12 +3,32 @@ import Image from "next/image";
 import { client } from "../../../../lib/sanity.client";
 import urlFor from "../../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
-import { RicjTextComponents } from "../../../../components/RichTextComponents";
+import { RichTextComponents } from "../../../../components/RichTextComponents";
 
 type Props = {
   params: {
     slug: string;
   };
+};
+
+export const revalidate = 30 // revalidate this page every 30 seconds
+
+export async function generateStaticParams() {
+
+  // query all the posts slugs
+  const query = groq`*[_type=='post']
+    {
+      slug
+    }
+  `;
+
+// post to Post arrays
+  const slugs: Post[] = await client.fetch(query);
+  const slugRoutes = slugs.map((slug) => slug.slug.current);
+
+  return slugRoutes.map((slug) => ({
+    slug,
+  }));
 };
 
 // this will display the post when selected
@@ -61,8 +81,8 @@ async function Post({ params: { slug } }: Props) {
 
                 <div className="w-64">
                   <h3 className="text-lg font-bold">{post.author.name}</h3>
-                  <div> {/**author bio */} </div>
                 </div>
+                
               </div>
             </div>
 
@@ -82,7 +102,7 @@ async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-      <PortableText value={post.body} components={RicjTextComponents} />
+      <PortableText value={post.body} components={RichTextComponents} />
     </article>
   );
 }

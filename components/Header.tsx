@@ -15,7 +15,7 @@ function Header() {
                     className="rounded-full"
                     />
             </Link>
-            <h1>Sougene's Daily Blog</h1>
+            <h1>Sougene Minett</h1>
         </div>
 
         <div></div>
