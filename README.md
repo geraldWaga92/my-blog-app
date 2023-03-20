@@ -1,27 +1,11 @@
-# Next.js + Tailwind CSS Example
+# Sougene Daily Blog App
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This a simple yet fast blog application built with Next.js and sanity with tailwind css. It has a revalidated caching which makes the app loading page super fast without delay.
 
-## Deploy your own
+The app studio editor is inserted directly into the application browser so we don't need to go to sanity website. I intend to give this application to my sister, which is why it is sougene daily blog 
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![blog1](https://user-images.githubusercontent.com/106008160/226267945-4474fefa-80c0-46ec-8477-3e65678a8814.png)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+![blog2](https://user-images.githubusercontent.com/106008160/226267959-af77b7bb-6661-4c66-995a-6f644f183e8a.png)
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+![blog3](https://user-images.githubusercontent.com/106008160/226267984-c5b88b95-77c6-4fd8-b997-dcea1c953b0b.png)
